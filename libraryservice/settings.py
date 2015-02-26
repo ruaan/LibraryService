@@ -100,6 +100,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/srv/static/libraryservice/static/'
 CORS_ORIGIN_ALLOW_ALL = True
 
 # CUSTOM AUTH
@@ -110,10 +111,11 @@ AUTHENTICATION_BACKENDS = (
 
 ## REST
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
+    'DEFAULT_PERMISSION_CLASSES': (        
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
         'tokenauth.authbackends.RESTTokenAuthBackend',
     )
 }
@@ -133,3 +135,4 @@ JENKINS_TASKS = (
 PROJECT_APPS = (
     'api',
 )
+
