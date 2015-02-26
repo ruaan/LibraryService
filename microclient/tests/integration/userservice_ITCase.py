@@ -1,6 +1,6 @@
 from django.test import TestCase
-from ..client import BaseClient
-from ..userservice import UserService
+#from ...client import BaseClient
+from ...userservice import UserService
 
 
 class UserServiceTestCase(TestCase):

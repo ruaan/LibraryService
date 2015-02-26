@@ -6,4 +6,4 @@
 
 ### Run integration tests:
 
-	python manage.py test --pattern="*_integration_tests.py"
+	python manage.py test --pattern="*_ITCase.py"
