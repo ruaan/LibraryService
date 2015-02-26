@@ -4,7 +4,7 @@ requests
 djangorestframework==3
 django-rest-swagger
 django-filter
-taggit
+django-taggit
 
 ## dev requirements
 sphinx

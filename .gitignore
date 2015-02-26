@@ -1,5 +1,7 @@
 # Custom
 reports
+.DS_Store
+db.sqlite3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

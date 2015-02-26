@@ -1,0 +1,39 @@
+- hosts: all
+  
+  tasks:
+    - name: update apt cache 
+      apt: update_cache=yes cache_valid_time=3600      
+
+  roles:
+    - toast38coza.djangoapp
+
+  vars:
+    postgresql_databases:
+      - name: libraryservice
+
+    postgresql_users:
+      - name: libraryservice
+        pass: libraryservice
+        encrypted: no       # denotes if the password is already encrypted.
+
+    postgresql_user_privileges:
+      - name: libraryservice          # user name
+        db: libraryservice            # database
+        priv: "ALL"        # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
+
+    ## notes: path_to_requirements, path_to_managepy: unless blank, must have trailing slash
+    django_apps: 
+      - {
+        "djangoapp_projectname" : "libraryservice", 
+        "djangoapp_track_branch": "master", 
+        "djangoapp_repo" : "git@github.com:TangentMicroServices/LibraryService.git", 
+        "path_to_requirements" : "", 
+        "path_to_managepy" : "",
+        "djangoapp_httpport": 8007,
+        "djangoapp_static" : true,
+        "djangoapp_domains" : "staging.libraryservice.tangentme.com",
+        "djangoapp_pythonversion" : "2.7",
+        "djangoapp_db_engine" : "postgresql_psycopg2",
+        "djangoapp_db_host" : "127.0.0.1" }
+
+
