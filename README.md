@@ -1,4 +1,4 @@
-[![Build Status](http://jenkins.tangentme.com/view/MicroServices/job/Build%20LibarayService/badge/icon)](http://jenkins.tangentme.com/view/MicroServices/job/Build%20LibarayService/)
+[![Build Status](http://jenkins.tangentme.com/buildStatus/icon?job=Deploy LibraryService to Staging)](http://jenkins.tangentme.com/view/MicroServices/job/Deploy%20LibraryService%20to%20Staging/)
 
 # LibraryService
 A Service for tracking and requesting books for the Tangent Library
