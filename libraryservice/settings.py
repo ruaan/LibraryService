@@ -39,6 +39,7 @@ INSTALLED_APPS = (
 
     ## 3rd party
     'rest_framework',
+    'rest_framework_swagger',
 
     ## custom
     'tokenauth',
@@ -136,3 +137,13 @@ PROJECT_APPS = (
     'api',
 )
 
+SWAGGER_SETTINGS = {
+    'api_key': 'fb5df470df0fa3727c49a61608996618d0954289',
+    'info': {
+        'contact': 'admin@tangentsolutions.co.za',
+        'description': 'This is a MicroService for maintaining (requesting, checking out and in) a library of books.',                       
+        'license': 'MIT',
+        'title': 'LibraryService',
+    },
+
+}
